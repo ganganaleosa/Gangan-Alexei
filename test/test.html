@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Madrid vs Barcelona</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Real Madrid vs Barcelona</h1>
+
+    <div id="timer">Timp: 00:00</div>
+
+    <div class="scoreboard">
+      <div class="team-section">
+        <h2>Real Madrid</h2>
+        <ul id="playersA">
+          <li>Courtouis</li>
+          <li>Carvajal</li>
+          <li>Rüdiger</li>
+          <li>Modrić</li>
+          <li>Vinícius Jr.</li>
+        </ul>
+        <div class="score" id="scoreA">0</div>
+      </div>
+
+      <div class="vs">VS</div>
+
+      <div class="team-section">
+        <h2>Barcelona</h2>
+        <ul id="playersB">
+          <li>ter Stegen</li>
+          <li>Koundé</li>
+          <li>Araujo</li>
+          <li>Pedri</li>
+          <li>Lewandowski</li>
+        </ul>
+        <div class="score" id="scoreB">0</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="updateScore()">Marchează Gol</button>
+      <button onclick="resetMatch()">Reset</button>
+    </div>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>
+
+
+  

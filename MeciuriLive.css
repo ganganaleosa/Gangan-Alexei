@@ -1,0 +1,143 @@
+/* css/meciuri-live.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a202c; /* bg-gray-900 echivalent */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  color: #f59e0b; /* galben intens */
+  font-weight: 700;
+  font-size: 2.25rem; /* text-4xl */
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  color: white;
+  font-size: 1.125rem; /* text-lg */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #d97706; /* galben mai inchis */
+}
+
+header nav ul li a.font-semibold {
+  font-weight: 600;
+}
+
+header nav ul li a.underline {
+  text-decoration: underline;
+}
+
+/* Section Meciuri Live */
+section.container {
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+section h2 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #2d3748; /* bg-gray-800 */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card .teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .teams img {
+  width: 48px;
+  height: 48px;
+}
+
+.card .teams p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card .teams span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+
+.card p.score {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.card button {
+  margin-top: 1rem;
+  background-color: #fbbf24; /* galben */
+  color: #1a202c; /* text negru */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #d97706;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d97706;
+}

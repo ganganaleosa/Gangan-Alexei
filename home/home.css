@@ -1,0 +1,123 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fundal imagine */
+body {
+  background-image: url('https://images.unsplash.com/photo-1600282026600-c32083b52f93');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00ffcc;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* Form container */
+.form-container {
+  margin: auto;
+  margin-top: 4rem;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #00ffcc;
+}
+
+.form-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.form-container button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #00cca3;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: auto;
+}
+
+footer .contact-info {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+footer .contact-info p {
+  margin: 0.3rem 0;
+}
+
+footer .contact-info span {
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+footer .contact-info a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+footer .contact-info a:hover {
+  text-decoration: underline;
+}

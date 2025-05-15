@@ -1,0 +1,383 @@
+/* Reset & font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d263b;
+  padding: 15px 30px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: default;
+}
+.logo img {
+  height: 40px;
+}
+.logo .green {
+  color: #27ae60;
+}
+
+.menu button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin: 0 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.menu button:hover,
+.menu button:focus {
+  background-color: #27ae60;
+  outline: none;
+}
+
+.search input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+.search input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #27ae60;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  background: #112d4e;
+  color: white;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  gap: 20px;
+}
+
+.players {
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.bonus-box {
+  background: #27ae60;
+  padding: 25px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgb(39 174 96 / 0.6);
+}
+.bonus-box h2 {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
+}
+.bonus-box p {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.bonus-box button {
+  background-color: #0d263b;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.bonus-box button:hover {
+  background-color: #145a32;
+}
+
+/* Match Summary */
+.match-summary {
+  background: white;
+  max-width: 1200px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 20px;
+}
+
+.team-block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.team-block img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+}
+
+.team-block h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 80px;
+  text-align: center;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #27ae60;
+}
+.scores span {
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
+}
+
+.bonus-tag {
+  background: #27ae60;
+  padding: 12px 22px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgb(39 174 96 / 0.8);
+}
+.bonus-tag h4 {
+  font-size: 1.8rem;
+}
+.bonus-tag button {
+  background: white;
+  color: #27ae60;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.bonus-tag button:hover {
+  background-color: #d1e7d1;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+
+/* Liga Section */
+.liga {
+  flex: 1 1 750px;
+  background: white;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
+}
+
+.liga h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #0d263b;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  background: #e4e9f0;
+  border: none;
+  padding: 8px 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #0d263b;
+  transition: background-color 0.3s ease;
+}
+.tabs button.active,
+.tabs button:hover {
+  background-color: #27ae60;
+  color: white;
+  outline: none;
+}
+
+/* Match List */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.match {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #f0f4f8;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #0d263b;
+  font-size: 1rem;
+}
+
+.match img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.match .score {
+  margin: 0 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #27ae60;
+}
+
+/* Table aside */
+.table {
+  flex: 0 0 380px;
+  background: white;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
+  height: fit-content;
+}
+
+.table h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #0d263b;
+  margin-bottom: 15px;
+}
+
+.table ul {
+  list-style: none;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.table ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.table ul li strong {
+  color: #27ae60;
+}
+
+/* Scrollbar for table */
+.table ul::-webkit-scrollbar {
+  width: 6px;
+}
+.table ul::-webkit-scrollbar-thumb {
+  background: #27ae60;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .table {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .liga {
+    width: 100%;
+  }
+  .match-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .team-block h3 {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menu button {
+    margin: 5px 6px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .search input {
+    width: 100%;
+  }
+  .bonus-box {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  .bonus-box h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
