@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baschet Live Premium</title>
+  <link rel="stylesheet" href="basket.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="Logo NBA" />
+        <h1>Live<span class="highlight">Basket</span></h1>
+
+
+        <p><a href="index.html">Live Ball</a></p>
+        <p><a href="formula 1.html">Formula 1</a></p>
+      </div>
+      <button id="mode-toggle" title="Comută modul">🌙</button>
+    </div>
+  </header>
+
+  <section class="slider">
+    <div class="slide active">🏀 Bine ai venit la Live Basket!</div>
+    <div class="slide">📊 Statistici live din NBA</div>
+    <div class="slide">👑 LeBron James - MVP etapa actuală</div>
+  </section>
+
+  <section class="live-score container">
+    <h2>Scor Live</h2>
+    <div class="match-card">
+      <div class="team">
+        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4ndR-n-gall7_h3f7NYcpQ_96x96.png" alt="Lakers" />
+        <p>Lakers</p>
+      </div>
+      <div class="score">108 : 105</div>
+      <div class="team">
+        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/9wPFTOxV_zP1KmRRggJNqQ_96x96.png" alt="Clippers" />
+        <p>Clippers</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mvp container">
+    <h2>MVP-ul Etapei</h2>
+    <div class="mvp-card">
+      <img src="https://b.fssta.com/uploads/application/nba/headshots/1120.vresize.350.350.medium.27.png" alt="LeBron James" />
+      <div class="info">
+        <h3>LeBron James</h3>
+        <p>41 PTS • 9 AST • 12 REB</p>
+        <span>Lakers</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="standings container">
+    <h2>Clasament NBA - Vest</h2>
+    <table>
+      <thead>
+        <tr><th>Echipă</th><th>M</th><th>V</th><th>Î</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nuggets</td><td>55</td><td>40</td><td>15</td></tr>
+        <tr><td>Lakers</td><td>55</td><td>38</td><td>17</td></tr>
+        <tr><td>Suns</td><td>55</td><td>36</td><td>19</td></tr>
+        <tr><td>Warriors</td><td>55</td><td>34</td><td>21</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Live Basket. Toate drepturile rezervate.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mode-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    });
+
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  </script>
+</body>
+</html>
+
+
+
