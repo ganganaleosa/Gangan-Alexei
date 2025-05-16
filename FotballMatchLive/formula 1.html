@@ -22,10 +22,10 @@
           <li><a href="#stiri">Știri</a></li>
           <li><a href="#galerie">Galerie</a></li>
           <li><a href="#contact">Contact</a></li>
-          <button id="mode-toggle" title="Comută modul">🌙</button>
         </ul>
-        
       </nav>
+      <!-- Mutat butonul aici, după nav, nu în interiorul ul -->
+      <button id="mode-toggle" title="Comută modul">🌙</button>
     </div>
   </header>
 
@@ -115,14 +115,6 @@
       document.body.classList.toggle('light-mode');
       toggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
     });
-
-    let slides = document.querySelectorAll('.slide');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000);
   </script>
 
 </body>
