@@ -1,0 +1,223 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Pentru footer jos pe pagină */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e1111;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Containerul principal ocupă tot spațiul rămas */
+.container {
+  display: flex;
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 100px;
+  background-color: #1a1d1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+  border-right: 1px solid #333;
+}
+
+.sidebar .logo {
+  font-size: 2rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.sidebar nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background-color: #272a2d;
+  color: #fff;
+}
+
+.sidebar nav span {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+hr {
+  width: 60%;
+  margin: 1rem 0;
+  border: 0.5px solid #333;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-section {
+  display: none;
+  text-align: center;
+}
+
+.content-section.active-section {
+  display: block;
+}
+
+/* Login Box Styling */
+.login-box {
+  background-color: #161a1d;
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+}
+
+.logo-img {
+  width: 80px;
+  margin-bottom: 1.5rem;
+}
+
+.login-box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.login-box p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #1f2326;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-google,
+.btn-facebook,
+.btn-apple {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.01);
+}
+
+.btn-google {
+  background-color: #202124;
+  color: white;
+}
+
+.btn-google:hover {
+  background-color: #3c4043;
+  transform: scale(1.01);
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.btn-facebook:hover {
+  background-color: #2d4373;
+  transform: scale(1.01);
+}
+
+.btn-apple {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.btn-apple:hover {
+  background-color: #2b2b2b;
+  transform: scale(1.01);
+}
+
+/* Separator line */
+.separator {
+  margin: 1.5rem 0;
+  color: #555;
+  position: relative;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  width: 40%;
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+

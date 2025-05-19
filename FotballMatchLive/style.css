@@ -6,8 +6,7 @@
 }
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f7f9fc;
-  color: #222;
+
   line-height: 1.4;
 }
 /* General */
@@ -497,7 +496,90 @@ body.light-mode {
 .news ul li:last-child {
   margin-bottom: 0;
 }
+/* Sidebar - design modern, doar pentru sidebar */
+.sidebar {
+  width: 100px;
+  background-color: #1a1d1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+  border-right: 1px solid #333;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+  min-height: 100vh;
+}
 
+.sidebar .logo {
+  font-size: 2rem;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
 
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
 
+.sidebar nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  transition: background 0.3s, color 0.3s;
+  border-left: 4px solid transparent;
+}
 
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background-color: #272a2d;
+  color: #fff;
+  border-left: 4px solid #27ae60;
+}
+
+.sidebar nav span {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+hr {
+  width: 60%;
+  margin: 1rem 0;
+  border: 0.5px solid #333;
+}
+
+/* Responsive sidebar */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 60px;
+    padding-top: 12px;
+  }
+  .sidebar .logo {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .sidebar nav span {
+    display: none;
+  }
+  .sidebar nav a {
+    font-size: 1.2rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

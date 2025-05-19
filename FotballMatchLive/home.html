@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏟️</div>
+      <nav>
+        <a href="#" class="nav-link active" data-target="home"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#" class="nav-link" data-target="login"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
+        <a href="#" class="nav-link" data-target="logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+        <a href="#" class="nav-link" data-target="profile"><i class="fas fa-user"></i><span>Profile</span></a>
+        <hr>
+        <a href="index.html"><i class="fas fa-globe"></i><span>LiveBall </span></a>
+        <a href="basketball.html"><i class="fas fa-basketball-ball"></i><span>Basketball</span></a>
+        <a href="formula 1.html"><i class="fas fa-flag-checkered"></i><span>Formula 1</span></a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div id="home" class="content-section active-section">
+        <h1>Welcome Home</h1>
+        <p>Explore live matches, highlights and more.</p>
+      </div>
+
+      <div id="login" class="content-section">
+        <div class="login-box">
+          <img src="https://liveball.uno/public/img/logo20.png?v=1" alt="LiveBall Logo" class="logo-img">
+          <h2>Log in or sign up free</h2>
+          <p>Access live sports, highlights, shows, and more.</p>
+          <input type="email" placeholder="Email Address" />
+          <button class="btn-primary">Continue</button>
+          <div class="separator">or</div>
+          <a href="https://accounts.google.com" target="_blank" class="btn-social btn-google">
+            <i class="fab fa-google"></i> Continue with Google
+          </a>
+          <a href="https://www.facebook.com/login" target="_blank" class="btn-social btn-facebook">
+            <i class="fab fa-facebook-f"></i> Continue with Facebook
+          </a>
+          <a href="https://appleid.apple.com/" target="_blank" class="btn-social btn-apple">
+            <i class="fab fa-apple"></i> Continue with Apple
+          </a>
+        </div>
+      </div>
+
+      <div id="logout" class="content-section">
+        <h1>You have been logged out.</h1>
+        <p>See you soon!</p>
+      </div>
+
+      <div id="profile" class="content-section">
+        <h1>User Profile</h1>
+        <p>View and edit your profile info.</p>
+      </div>
+    </main>
+  </div>
+
+
+  <script>
+    // Navigare între secțiuni interne
+    const links = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll(".content-section");
+
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        const target = link.dataset.target;
+        sections.forEach(section => {
+          section.classList.remove("active-section");
+          if (section.id === target) {
+            section.classList.add("active-section");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

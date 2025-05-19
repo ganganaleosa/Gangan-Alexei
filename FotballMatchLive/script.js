@@ -17,26 +17,57 @@ if (totalSlides > 0) {
 const toggleBtn = document.getElementById('mode-toggle');
 const body = document.body;
 
-// Load saved mode
-if (localStorage.getItem('mode') === 'light') {
-  body.classList.add('light-mode');
-  toggleBtn.classList.add('light');
-  toggleBtn.textContent = '☀️';
-} else {
-  toggleBtn.textContent = '🌙';  // implicit dark mode icon
+// Safe check for toggleBtn
+if (toggleBtn) {
+  // Load saved mode
+  if (localStorage.getItem('mode') === 'light') {
+    body.classList.add('light-mode');
+    toggleBtn.classList.add('light');
+    toggleBtn.textContent = '☀️';
+  } else {
+    toggleBtn.textContent = '🌙';  // implicit dark mode icon
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    toggleBtn.classList.toggle('light');
+    if (body.classList.contains('light-mode')) {
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('mode', 'light');
+    } else {
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('mode', 'dark');
+    }
+  });
 }
 
-toggleBtn.addEventListener('click', () => {
-  body.classList.toggle('light-mode');
-  toggleBtn.classList.toggle('light');
-  if (body.classList.contains('light-mode')) {
-    toggleBtn.textContent = '☀️';
-    localStorage.setItem('mode', 'light');
-  } else {
-    toggleBtn.textContent = '🌙';
-    localStorage.setItem('mode', 'dark');
-  }
-});
+
+
+// Navigation links logic (only if elements exist)
+const links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.content-section');
+
+if (links.length && sections.length) {
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Active link
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+
+      // Show section
+      const targetId = link.getAttribute('data-target');
+      sections.forEach(section => {
+        section.classList.remove('active-section');
+        if (section.id === targetId) {
+          section.classList.add('active-section');
+        }
+      });
+    });
+  });
+}
+
 
 
 
