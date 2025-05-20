@@ -5,82 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Baschet Live Premium</title>
   <link rel="stylesheet" href="basket.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="Logo NBA" />
-        <h1>Live<span class="highlight">Basket</span></h1>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🏟️</div>
+      <nav>
+        <a href="home.html" class="nav-link" data-target="home"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#" class="nav-link" data-target="login"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
+        <a href="#" class="nav-link" data-target="logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+        <a href="#" class="nav-link" data-target="profile"><i class="fas fa-user"></i><span>Profile</span></a>
+        <hr>
+        <a href="index.html"><i class="fas fa-globe"></i><span>LiveBall</span></a>
+        <a href="basketball.html" class="nav-link active"><i class="fas fa-basketball-ball"></i><span>Basketball</span></a>
+        <a href="formula 1.html"><i class="fas fa-flag-checkered"></i><span>Formula 1</span></a>
+      </nav>
+    </aside>
 
+    <main class="main-content">
+   
+      <section class="slider">
+        <div class="slide active">🏀 Bine ai venit la <b>Live Basket</b>! Urmărește scoruri și statistici live.</div>
+        <div class="slide">📊 Statistici live din NBA și Liga Națională</div>
+        <div class="slide">👑 LeBron James - MVP etapa actuală</div>
+      </section>
 
-        <p><a href="index.html">Live Ball</a></p>
-        <p><a href="formula 1.html">Formula 1</a></p>
-        <p><a href="home.html">Home</a></p>
+   
+      <section id="home" class="content-section active-section">
+        <header class="header">
+          <div class="logo">
+            <img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="Logo NBA" />
+            <h1>Live<span class="highlight">Basket</span></h1>
+          </div>
+          <div class="menu">
+            <button id="mode-toggle" title="Comută modul">🌙</button>
+          </div>
+        </header>
 
-      </div>
-      <button id="mode-toggle" title="Comută modul">🌙</button>
-    </div>
-  </header>
+        <section class="live-score">
+          <h2>Scor Live</h2>
+          <div class="match-card">
+            <div class="team">
+              <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4ndR-n-gall7_h3f7NYcpQ_96x96.png" alt="Lakers" />
+              <p>Lakers</p>
+            </div>
+            <div class="score">108 : 105</div>
+            <div class="team">
+              <img src="https://ssl.gstatic.com/onebox/media/sports/logos/9wPFTOxV_zP1KmRRggJNqQ_96x96.png" alt="Clippers" />
+              <p>Clippers</p>
+            </div>
+          </div>
+        </section>
 
-  <section class="slider">
-    <div class="slide active">🏀 Bine ai venit la Live Basket!</div>
-    <div class="slide">📊 Statistici live din NBA</div>
-    <div class="slide">👑 LeBron James - MVP etapa actuală</div>
-  </section>
+        <section class="mvp">
+          <h2>MVP-ul Etapei</h2>
+          <div class="mvp-card">
+            <img src="https://b.fssta.com/uploads/application/nba/headshots/1120.vresize.350.350.medium.27.png" alt="LeBron James" />
+            <div class="info">
+              <h3>LeBron James</h3>
+              <p>41 PTS • 9 AST • 12 REB</p>
+              <span>Lakers</span>
+            </div>
+          </div>
+        </section>
 
-  <section class="live-score container">
-    <h2>Scor Live</h2>
-    <div class="match-card">
-      <div class="team">
-        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4ndR-n-gall7_h3f7NYcpQ_96x96.png" alt="Lakers" />
-        <p>Lakers</p>
-      </div>
-      <div class="score">108 : 105</div>
-      <div class="team">
-        <img src="https://ssl.gstatic.com/onebox/media/sports/logos/9wPFTOxV_zP1KmRRggJNqQ_96x96.png" alt="Clippers" />
-        <p>Clippers</p>
-      </div>
-    </div>
-  </section>
+        <section class="standings">
+          <h2>Clasament NBA - Vest</h2>
+          <table>
+            <thead>
+              <tr><th>Echipă</th><th>M</th><th>V</th><th>Î</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Nuggets</td><td>55</td><td>40</td><td>15</td></tr>
+              <tr><td>Lakers</td><td>55</td><td>38</td><td>17</td></tr>
+              <tr><td>Suns</td><td>55</td><td>36</td><td>19</td></tr>
+              <tr><td>Warriors</td><td>55</td><td>34</td><td>21</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
 
-  <section class="mvp container">
-    <h2>MVP-ul Etapei</h2>
-    <div class="mvp-card">
-      <img src="https://b.fssta.com/uploads/application/nba/headshots/1120.vresize.350.350.medium.27.png" alt="LeBron James" />
-      <div class="info">
-        <h3>LeBron James</h3>
-        <p>41 PTS • 9 AST • 12 REB</p>
-        <span>Lakers</span>
-      </div>
-    </div>
-  </section>
+    
+      <section id="login" class="content-section">
+        <div class="login-box">
+          <img src="https://liveball.uno/public/img/logo20.png?v=1" alt="LiveBall Logo" class="logo-img">
+          <h2>Loghează-te sau creează cont</h2>
+          <p>Accesează scoruri live, highlights și multe altele.</p>
+          <input type="email" placeholder="Adresă de email" />
+          <button class="btn-primary">Continuă</button>
+          <div class="separator">sau</div>
+          <a href="https://accounts.google.com" target="_blank" class="btn-social btn-google">
+            <i class="fab fa-google"></i> Continuă cu Google
+          </a>
+          <a href="https://www.facebook.com/login" target="_blank" class="btn-social btn-facebook">
+            <i class="fab fa-facebook-f"></i> Continuă cu Facebook
+          </a>
+          <a href="https://appleid.apple.com/" target="_blank" class="btn-social btn-apple">
+            <i class="fab fa-apple"></i> Continuă cu Apple
+          </a>
+        </div>
+      </section>
 
-  <section class="standings container">
-    <h2>Clasament NBA - Vest</h2>
-    <table>
-      <thead>
-        <tr><th>Echipă</th><th>M</th><th>V</th><th>Î</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Nuggets</td><td>55</td><td>40</td><td>15</td></tr>
-        <tr><td>Lakers</td><td>55</td><td>38</td><td>17</td></tr>
-        <tr><td>Suns</td><td>55</td><td>36</td><td>19</td></tr>
-        <tr><td>Warriors</td><td>55</td><td>34</td><td>21</td></tr>
-      </tbody>
-    </table>
-  </section>
+  
+      <section id="logout" class="content-section">
+        <h1>Te-ai delogat cu succes.</h1>
+        <p>Revino oricând pentru scoruri live!</p>
+      </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Live Basket. Toate drepturile rezervate.</p>
-  </footer>
+    
+      <section id="profile" class="content-section">
+        <h1>Profil utilizator</h1>
+        <p>Aici poți vedea și edita datele tale.</p>
+      </section>
+    </main>
+  </div>
+
+  <div id="footer-placeholder"></div>
 
   <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <script>
+ 
     const toggle = document.getElementById('mode-toggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
       toggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
     });
+
 
     let slides = document.querySelectorAll('.slide');
     let current = 0;
@@ -89,6 +150,26 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }, 5000);
+
+ 
+    const links = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll(".content-section");
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        if (link.dataset.target) {
+          e.preventDefault();
+          links.forEach(l => l.classList.remove("active"));
+          link.classList.add("active");
+          const target = link.dataset.target;
+          sections.forEach(section => {
+            section.classList.remove("active-section");
+            if (section.id === target) {
+              section.classList.add("active-section");
+            }
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>

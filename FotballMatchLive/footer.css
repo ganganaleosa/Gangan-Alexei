@@ -67,7 +67,7 @@
   width: 100%;
 }
 
-/* Responsive pentru ecrane mici */
+
 @media (max-width: 800px) {
   .footer-container {
     flex-direction: column;

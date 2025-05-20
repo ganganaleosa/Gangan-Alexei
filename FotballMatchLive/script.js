@@ -1,4 +1,4 @@
-// Slider
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
@@ -17,15 +17,14 @@ if (totalSlides > 0) {
 const toggleBtn = document.getElementById('mode-toggle');
 const body = document.body;
 
-// Safe check for toggleBtn
 if (toggleBtn) {
-  // Load saved mode
+
   if (localStorage.getItem('mode') === 'light') {
     body.classList.add('light-mode');
     toggleBtn.classList.add('light');
     toggleBtn.textContent = '☀️';
   } else {
-    toggleBtn.textContent = '🌙';  // implicit dark mode icon
+    toggleBtn.textContent = '🌙';  
   }
 
   toggleBtn.addEventListener('click', () => {
@@ -43,7 +42,7 @@ if (toggleBtn) {
 
 
 
-// Navigation links logic (only if elements exist)
+
 const links = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.content-section');
 
@@ -52,11 +51,11 @@ if (links.length && sections.length) {
     link.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // Active link
+
       links.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
 
-      // Show section
+
       const targetId = link.getAttribute('data-target');
       sections.forEach(section => {
         section.classList.remove('active-section');

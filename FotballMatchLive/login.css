@@ -103,7 +103,7 @@ input[type="email"] {
   font-size: 18px;
 }
 
-/* Google */
+
 .btn-google {
   background-color: #4285F4;
 }
@@ -112,7 +112,6 @@ input[type="email"] {
   background-color: #357ae8;
 }
 
-/* Facebook */
 .btn-facebook {
   background-color: #1877F2;
 }
@@ -121,7 +120,7 @@ input[type="email"] {
   background-color: #0f65d4;
 }
 
-/* Apple */
+
 .btn-apple {
   background-color: #000;
 }
